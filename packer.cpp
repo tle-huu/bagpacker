@@ -181,6 +181,7 @@ int Packer::handle_dynamic_entry(elf64_dyn const & header)
 			printf("Setting relocation_table_size_ to %lu\n", relocation_table_size_);
 			break;
 		case RPATH:
+		case RUNPATH:
 			rpath_ = (char*)header.d_un.d_ptr;
 			break;
 		case STRSZ:

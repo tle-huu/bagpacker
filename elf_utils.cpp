@@ -115,6 +115,8 @@ const char* dynamic_tag_to_str(DynamicTag tag)
 			return "initarray";
 		case FINIARRAY:
 			return "finiarray";
+		case RUNPATH:
+			return "runpath";
 		case INITARRAYSZ:
 			return "initarraysz";
 		case FINIARRAYSZ:

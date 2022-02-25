@@ -242,7 +242,7 @@ int ElfFile::retrieve_rpath()
         const elf64_dyn* dyntab = (const elf64_dyn*)(file_data_ + dynamic_section_header_->sh_offset);
         for (int i = 0; i < size; ++i)
         {
-                if (dyntab[i].d_tag == RPATH)
+                if (dyntab[i].d_tag == RUNPATH)
                 {
                         std::string rpath = dt_strtab_ + dyntab[i].d_un.d_ptr;
                         int start = 0;
